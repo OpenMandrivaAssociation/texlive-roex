@@ -5,7 +5,7 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-roex
-Version:	20111102
+Version:	20111104
 Release:	1
 Summary:	TeXLive roex package
 Group:		Publishing
@@ -58,6 +58,7 @@ TeXLive roex package.
 %doc %{_texmfdistdir}/source/metafont/roex/roexsamp/roes-02.mf
 %doc %{_texmfdistdir}/source/metafont/roex/roexsamp/roes-03.mf
 %doc %{_texmfdistdir}/source/metafont/roex/roexsamp/roes-04.mf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -68,3 +69,5 @@ TeXLive roex package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metafont source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
