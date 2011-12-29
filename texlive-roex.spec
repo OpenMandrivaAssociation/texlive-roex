@@ -17,26 +17,16 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 TeXLive roex package.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -59,7 +49,6 @@ TeXLive roex package.
 %doc %{_texmfdistdir}/source/metafont/roex/roexsamp/roes-02.mf
 %doc %{_texmfdistdir}/source/metafont/roex/roexsamp/roes-03.mf
 %doc %{_texmfdistdir}/source/metafont/roex/roexsamp/roes-04.mf
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -70,5 +59,3 @@ TeXLive roex package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metafont source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
