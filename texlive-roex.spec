@@ -59,3 +59,17 @@ TeXLive roex package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metafont source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111104-2
++ Revision: 755720
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111104-1
++ Revision: 719459
+- texlive-roex
+- texlive-roex
+- texlive-roex
+- texlive-roex
+
