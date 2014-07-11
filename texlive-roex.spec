@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-roex
 Version:	20111104
-Release:	7
+Release:	8
 Summary:	TeXLive roex package
 Group:		Publishing
 URL:		http://tug.org/texlive
