@@ -5,8 +5,8 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-roex
-Version:	20111104
-Release:	10
+Version:	20171116
+Release:	1
 Summary:	TeXLive roex package
 Group:		Publishing
 URL:		http://tug.org/texlive
