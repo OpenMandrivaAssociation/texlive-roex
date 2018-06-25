@@ -5,7 +5,7 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-roex
-Version:	20171116
+Version:	20180303
 Release:	1
 Summary:	TeXLive roex package
 Group:		Publishing
