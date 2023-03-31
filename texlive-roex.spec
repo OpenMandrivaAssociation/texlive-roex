@@ -1,6 +1,6 @@
 Name:		texlive-roex
 Version:	45818
-Release:	1
+Release:	2
 Summary:	TeXLive roex package
 Group:		Publishing
 URL:		http://tug.org/texlive
